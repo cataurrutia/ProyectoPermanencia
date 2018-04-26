@@ -15,10 +15,10 @@ namespace ProyectoPermanencia.Datos
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class PermanenciaDBConfig : DbContext
+    public partial class PermanenciaDBContext : DbContext
     {
-        public PermanenciaDBConfig()
-            : base("name=PermanenciaDBConfig")
+        public PermanenciaDBContext()
+            : base("name=PermanenciaDBContext")
         {
         }
     

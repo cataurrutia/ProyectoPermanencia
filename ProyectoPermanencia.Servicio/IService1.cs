@@ -19,6 +19,9 @@ namespace ProyectoPermanencia.Servicio
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        //[OperationContract]
+        //List<Object> obtenerListaGlobal(string rut, string nombre, string jornada, string escuela, string carrera);
+
         // TODO: agregue aquí sus operaciones de servicio
     }
 

@@ -4,25 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8d21e0dfb86d4cddb4d653b95129e549" Name="Diagram1">
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Alumno" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Año_Deuda" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Asignatura" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Beneficio" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Carrera" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Escuela" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Jornada" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Medición" Width="1.5" PointX="2" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Mes_Deuda" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Profesor" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Sede" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.LK_Semestre" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.FT_Asistencia" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.FT_Nota_Asistencia" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.Full_Alumnos" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.Score_Alumnos" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PermanenciaDBContext.Vector_Alumno" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+      <Diagram DiagramId="4fef06965a7d4c1c982466babfca23a0" Name="Diagram1">
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Alumno" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Año_Deuda" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Asignatura" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Beneficio" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Carrera" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Escuela" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Jornada" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Medición" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Mes_Deuda" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Profesor" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Sede" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.LK_Semestre" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.FT_Asistencia" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.FT_Nota_Asistencia" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.Full_Alumnos" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.Score_Alumnos" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PermanenciaBDContext.Vector_Alumno" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

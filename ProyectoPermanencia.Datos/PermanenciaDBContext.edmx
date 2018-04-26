@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PermanenciaDBContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="PermanenciaBDContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errores durante la generación:
 advertencia 6013: La tabla o vista 'Permanencia_2.dbo.AsistenciaSTG' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
         <EntityType Name="AsistenciaSTG">
@@ -421,7 +421,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <EntityContainer Name="PermanenciaDBContextStoreContainer">
+        <EntityContainer Name="PermanenciaBDContextStoreContainer">
           <EntitySet Name="LK_Alumno" EntityType="Self.LK_Alumno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LK_Año_Deuda" EntityType="Self.LK_Año_Deuda" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LK_Asignatura" EntityType="Self.LK_Asignatura" Schema="dbo" store:Type="Tables" />
@@ -499,7 +499,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="PermanenciaDBContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="PermanenciaBDContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="LK_Alumno">
           <Key>
             <PropertyRef Name="Id_Alumno" />
@@ -672,7 +672,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Property Name="Notas_azules" Type="Int32" />
           <Property Name="Asistencias" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="PermanenciaDBConfig" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PermanenciaDBContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="LK_Alumno" EntityType="Self.LK_Alumno" />
           <EntitySet Name="LK_Año_Deuda" EntityType="Self.LK_Año_Deuda" />
           <EntitySet Name="LK_Asignatura" EntityType="Self.LK_Asignatura" />
@@ -707,11 +707,11 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(PermanenciaDBContext.sp_helpdiagramdefinition_Result)">
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(PermanenciaBDContext.sp_helpdiagramdefinition_Result)">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(PermanenciaDBContext.sp_helpdiagrams_Result)">
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(PermanenciaBDContext.sp_helpdiagrams_Result)">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -738,9 +738,9 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PermanenciaDBContextStoreContainer" CdmEntityContainer="PermanenciaDBConfig">
+        <EntityContainerMapping StorageEntityContainer="PermanenciaBDContextStoreContainer" CdmEntityContainer="PermanenciaDBContext">
           <EntitySetMapping Name="LK_Alumno">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Alumno">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Alumno">
               <MappingFragment StoreEntitySet="LK_Alumno">
                 <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
                 <ScalarProperty Name="Id_Sede" ColumnName="Id_Sede" />
@@ -752,7 +752,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Año_Deuda">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Año_Deuda">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Año_Deuda">
               <MappingFragment StoreEntitySet="LK_Año_Deuda">
                 <ScalarProperty Name="Id_Año_Deuda" ColumnName="Id_Año_Deuda" />
                 <ScalarProperty Name="Desc_Año_Deuda" ColumnName="Desc_Año_Deuda" />
@@ -760,7 +760,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Asignatura">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Asignatura">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Asignatura">
               <MappingFragment StoreEntitySet="LK_Asignatura">
                 <ScalarProperty Name="Id_Asignatura" ColumnName="Id_Asignatura" />
                 <ScalarProperty Name="Cod_Asignatura" ColumnName="Cod_Asignatura" />
@@ -773,7 +773,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Beneficio">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Beneficio">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Beneficio">
               <MappingFragment StoreEntitySet="LK_Beneficio">
                 <ScalarProperty Name="Id_Beneficio" ColumnName="Id_Beneficio" />
                 <ScalarProperty Name="Desc_Beneficio" ColumnName="Desc_Beneficio" />
@@ -781,7 +781,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Carrera">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Carrera">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Carrera">
               <MappingFragment StoreEntitySet="LK_Carrera">
                 <ScalarProperty Name="Id_Carrera" ColumnName="Id_Carrera" />
                 <ScalarProperty Name="Desc_Carrera" ColumnName="Desc_Carrera" />
@@ -790,7 +790,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Escuela">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Escuela">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Escuela">
               <MappingFragment StoreEntitySet="LK_Escuela">
                 <ScalarProperty Name="Id_Escuela" ColumnName="Id_Escuela" />
                 <ScalarProperty Name="Desc_Escuela" ColumnName="Desc_Escuela" />
@@ -798,7 +798,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Jornada">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Jornada">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Jornada">
               <MappingFragment StoreEntitySet="LK_Jornada">
                 <ScalarProperty Name="Id_Jornada" ColumnName="Id_Jornada" />
                 <ScalarProperty Name="Desc_Jornada" ColumnName="Desc_Jornada" />
@@ -806,7 +806,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Medición">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Medición">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Medición">
               <MappingFragment StoreEntitySet="LK_Medición">
                 <ScalarProperty Name="Id_Medición" ColumnName="Id_Medición" />
                 <ScalarProperty Name="Desc_Medición" ColumnName="Desc_Medición" />
@@ -814,7 +814,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Mes_Deuda">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Mes_Deuda">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Mes_Deuda">
               <MappingFragment StoreEntitySet="LK_Mes_Deuda">
                 <ScalarProperty Name="Id_Mes_Deuda" ColumnName="Id_Mes_Deuda" />
                 <ScalarProperty Name="Desc_Mes_Deuda" ColumnName="Desc_Mes_Deuda" />
@@ -823,7 +823,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Profesor">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Profesor">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Profesor">
               <MappingFragment StoreEntitySet="LK_Profesor">
                 <ScalarProperty Name="Id_Profesor" ColumnName="Id_Profesor" />
                 <ScalarProperty Name="Desc_Profesor" ColumnName="Desc_Profesor" />
@@ -832,7 +832,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Sede">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Sede">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Sede">
               <MappingFragment StoreEntitySet="LK_Sede">
                 <ScalarProperty Name="Id_Sede" ColumnName="Id_Sede" />
                 <ScalarProperty Name="Desc_Sede" ColumnName="Desc_Sede" />
@@ -840,7 +840,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LK_Semestre">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.LK_Semestre">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.LK_Semestre">
               <MappingFragment StoreEntitySet="LK_Semestre">
                 <ScalarProperty Name="Id_Semestre" ColumnName="Id_Semestre" />
                 <ScalarProperty Name="Desc_Semestre" ColumnName="Desc_Semestre" />
@@ -848,7 +848,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.sysdiagrams">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -859,7 +859,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FT_Asistencia">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.FT_Asistencia">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.FT_Asistencia">
               <MappingFragment StoreEntitySet="FT_Asistencia">
                 <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
                 <ScalarProperty Name="Id_Asignatura" ColumnName="Id_Asignatura" />
@@ -870,7 +870,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FT_Nota_Asistencia">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.FT_Nota_Asistencia">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.FT_Nota_Asistencia">
               <MappingFragment StoreEntitySet="FT_Nota_Asistencia">
                 <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
                 <ScalarProperty Name="Id_Asignatura" ColumnName="Id_Asignatura" />
@@ -885,7 +885,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Full_Alumnos">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.Full_Alumnos">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.Full_Alumnos">
               <MappingFragment StoreEntitySet="Full_Alumnos">
                 <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
                 <ScalarProperty Name="Id_Asignatura" ColumnName="Id_Asignatura" />
@@ -898,7 +898,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Score_Alumnos">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.Score_Alumnos">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.Score_Alumnos">
               <MappingFragment StoreEntitySet="Score_Alumnos">
                 <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
                 <ScalarProperty Name="Id_Medición" ColumnName="Id_Medición" />
@@ -915,7 +915,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Vector_Alumno">
-            <EntityTypeMapping TypeName="PermanenciaDBContext.Vector_Alumno">
+            <EntityTypeMapping TypeName="PermanenciaBDContext.Vector_Alumno">
               <MappingFragment StoreEntitySet="Vector_Alumno">
                 <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
                 <ScalarProperty Name="Id_Medición" ColumnName="Id_Medición" />
@@ -927,20 +927,20 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="PermanenciaDBContext.Store.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="PermanenciaDBContext.Store.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="PermanenciaDBContext.Store.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="PermanenciaDBContext.Store.sp_helpdiagramdefinition">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="PermanenciaBDContext.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="PermanenciaBDContext.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="PermanenciaBDContext.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="PermanenciaBDContext.Store.sp_helpdiagramdefinition">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="PermanenciaDBContext.sp_helpdiagramdefinition_Result">
+              <ComplexTypeMapping TypeName="PermanenciaBDContext.sp_helpdiagramdefinition_Result">
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="PermanenciaDBContext.Store.sp_helpdiagrams">
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="PermanenciaBDContext.Store.sp_helpdiagrams">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="PermanenciaDBContext.sp_helpdiagrams_Result">
+              <ComplexTypeMapping TypeName="PermanenciaBDContext.sp_helpdiagrams_Result">
                 <ScalarProperty Name="Database" ColumnName="Database" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -949,8 +949,8 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="PermanenciaDBContext.Store.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="PermanenciaDBContext.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="PermanenciaBDContext.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="PermanenciaBDContext.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
