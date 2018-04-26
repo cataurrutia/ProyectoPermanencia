@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoPermanencia.Servici
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoPermanencia.AccesoDatos", "ProyectoPermanencia.AccesoDatos\ProyectoPermanencia.AccesoDatos.csproj", "{98E2EB65-A0E0-470C-B383-CBEE07DEF121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoPermanencia.Datos", "ProyectoPermanencia.Datos\ProyectoPermanencia.Datos.csproj", "{52553493-F72F-4ED5-AF1E-3B5D6C8B7AC0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{98E2EB65-A0E0-470C-B383-CBEE07DEF121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98E2EB65-A0E0-470C-B383-CBEE07DEF121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98E2EB65-A0E0-470C-B383-CBEE07DEF121}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52553493-F72F-4ED5-AF1E-3B5D6C8B7AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52553493-F72F-4ED5-AF1E-3B5D6C8B7AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52553493-F72F-4ED5-AF1E-3B5D6C8B7AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52553493-F72F-4ED5-AF1E-3B5D6C8B7AC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
