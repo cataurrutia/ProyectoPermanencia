@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using ProyectoPermanencia.Datos;
 namespace ProyectoPermanencia.Servicio
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
@@ -30,10 +31,28 @@ namespace ProyectoPermanencia.Servicio
             return composite;
         }
 
-        //public List<object> obtenerListaGlobal(string rut, string nombre, string jornada, string escuela, string carrera)
-        //{
-        //    AccesoFichaAlumno al = new AccesoFichaAlumno();
-        //    return al.TablaGlobal(rut, nombre, jornada, escuela, carrera);
-        //}
+        public List<AccesoFichaGlobal> obtenerListaGlobal(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera)
+        {
+            AccesoFichaGlobal al = new AccesoFichaGlobal();
+            return al.TablaGlobalTotal(rut, nombre, jornada, escuela, carrera);
+        }
+
+        public List<AccesoFichaGlobal> ObtenerListaGlobalSoloTipoCarrera(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera)
+        {
+            AccesoFichaGlobal al = new AccesoFichaGlobal();
+            return al.TablaGlobalSoloTipoCarrera(rut, nombre,jornada, escuela, carrera);
+        }
+
+        public List<AccesoFichaGlobal> ObtenerListaGlobalSoloTipoEscuela(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera)
+        {
+            AccesoFichaGlobal al = new AccesoFichaGlobal();
+            return al.TablaGlobalSoloTipoEscuela(rut, nombre,jornada, escuela, carrera);
+        }
+
+        public List<AccesoFichaGlobal> ObtenerListaGlobalSoloTipoJornada(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera)
+        {
+            AccesoFichaGlobal al = new AccesoFichaGlobal();
+            return al.TablaGlobalSoloTipoJornada(rut, nombre, jornada, escuela, carrera);
+        }
     }
 }

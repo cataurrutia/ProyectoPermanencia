@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-
+using ProyectoPermanencia.Datos;
 namespace ProyectoPermanencia.Servicio
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
@@ -19,9 +19,17 @@ namespace ProyectoPermanencia.Servicio
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        //[OperationContract]
-        //List<Object> obtenerListaGlobal(string rut, string nombre, string jornada, string escuela, string carrera);
+        [OperationContract]
+        List<AccesoFichaGlobal> obtenerListaGlobal(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera);
 
+        [OperationContract]
+        List<AccesoFichaGlobal> ObtenerListaGlobalSoloTipoJornada(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera);
+
+        [OperationContract]
+        List<AccesoFichaGlobal> ObtenerListaGlobalSoloTipoEscuela(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera);
+
+        [OperationContract]
+        List<AccesoFichaGlobal> ObtenerListaGlobalSoloTipoCarrera(string[] rut, string[] nombre, string[] jornada, string[] escuela, string[] carrera);
         // TODO: agregue aquí sus operaciones de servicio
     }
 
