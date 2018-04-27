@@ -15,25 +15,15 @@ namespace ProyectoPermanencia.Negocio
         public static LK_Alumno Alumno(String alumno, String carrera, String jornada, String sede)
         {
             AccesoAlumno acAlum;
-            if (!RecuperarAlumno(alumno, carrera, jornada, sede out acAlum))
+            if (!RecuperarAlumno(alumno, carrera, jornada, sede, out acAlum))
                 throw new Exception("Alumno no existe");
             else
                 return acAlum;
         }
 
-        private static Boolean RecuperarAlumno(String usuario, String password, out LK_Alumno usrLogin)
+        private static Boolean RecuperarAlumno(String alumno, String carrera, String jornada, String sede)
         {
-            bool validacion;
-            usrLogin = acceso.obtenerEstado(usuario, password);
-            if (usrLogin != null)
-            {
-                validacion = usrLogin.pass_administrador.Equals(password);
-            }
-            else
-            {
-                validacion = false;
-            }
-            return validacion;
+            
         }
 
 

@@ -4,65 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PermanenciaBDContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.AsistenciaSTG' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="AsistenciaSTG">
-          <Property Name="RUT Alumno" Type="nvarchar" MaxLength="15" />
-          <Property Name="Nombre Alumno" Type="nvarchar" MaxLength="255" />
-          <Property Name="Apellido Alumno" Type="nvarchar" MaxLength="255" />
-          <Property Name="Carrera" Type="nvarchar" MaxLength="255" />
-          <Property Name="Asignatura" Type="nvarchar" MaxLength="255" />
-          <Property Name="Nombre Asignatura" Type="nvarchar" MaxLength="255" />
-          <Property Name="Asistencia" Type="float" />
-        </EntityType>-->
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Curso_STG' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Curso_STG">
-          <Property Name="SEDE" Type="nvarchar" MaxLength="255" />
-          <Property Name="CARRERA" Type="nvarchar" MaxLength="255" />
-          <Property Name="JORNADA" Type="nvarchar" MaxLength="255" />
-          <Property Name="CODIGO ASIGNATURA" Type="nvarchar" MaxLength="255" />
-          <Property Name="DESC ASIGNATURA" Type="nvarchar" MaxLength="255" />
-          <Property Name="SECCION" Type="int" />
-          <Property Name="AÑO" Type="int" />
-          <Property Name="SEMESTRE" Type="float" />
-          <Property Name="RUT ALUMNO" Type="nvarchar" MaxLength="255" />
-          <Property Name="NOMBRE ALUMNO" Type="nvarchar" MaxLength="255" />
-          <Property Name="ESTADO ASIGNATURA" Type="nvarchar" MaxLength="255" />
-          <Property Name="DESC ESTADO ASIGNATURA" Type="nvarchar" MaxLength="255" />
-          <Property Name="Nº NOTAS PARCIALES" Type="float" />
-          <Property Name="Nº NOTAS EXAMEN" Type="float" />
-          <Property Name="C1" Type="float" />
-          <Property Name="C2" Type="float" />
-          <Property Name="C3" Type="float" />
-          <Property Name="C4" Type="float" />
-          <Property Name="C5" Type="float" />
-          <Property Name="C6" Type="float" />
-          <Property Name="C7" Type="float" />
-          <Property Name="C8" Type="float" />
-          <Property Name="C9" Type="float" />
-          <Property Name="C10" Type="float" />
-          <Property Name="C11" Type="float" />
-          <Property Name="C12" Type="float" />
-          <Property Name="C13" Type="float" />
-          <Property Name="C14" Type="float" />
-          <Property Name="C15" Type="float" />
-          <Property Name="C16" Type="float" />
-          <Property Name="C17" Type="float" />
-          <Property Name="C18" Type="float" />
-          <Property Name="C19" Type="float" />
-          <Property Name="C20" Type="float" />
-          <Property Name="E1" Type="float" />
-          <Property Name="E2" Type="float" />
-          <Property Name="E3" Type="float" />
-          <Property Name="PROMEDIO CATEDRA" Type="float" />
-          <Property Name="PROMEDIO EXAMEN" Type="float" />
-          <Property Name="NOTA FINAL" Type="float" />
-          <Property Name="CODIGO ASIGNATURA MALLA" Type="nvarchar" MaxLength="255" />
-          <Property Name="DESC CODIGO ASIGNATURA MALLA" Type="nvarchar" MaxLength="255" />
-          <Property Name="ER" Type="float" />
-        </EntityType>-->
+    <Schema Namespace="PermanenciaBDContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'Permanencia_2.dbo.FT_Asistencia' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="FT_Asistencia">
@@ -75,16 +17,6 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.FT_Asistencia' no tiene de
           <Property Name="Id_Medición" Type="int" />
           <Property Name="F_Asistencia" Type="float" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.FT_Deuda' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="FT_Deuda">
-          <Property Name="Id_Alumno" Type="int" />
-          <Property Name="Id_Mes_Deuda" Type="int" />
-          <Property Name="Id_Medición" Type="int" />
-          <Property Name="Id_Beneficio" Type="int" />
-          <Property Name="F_Monto_Deuda" Type="int" />
-          <Property Name="F_Cant_Deuda" Type="int" />
-        </EntityType>-->
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'Permanencia_2.dbo.FT_Nota_Asistencia' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="FT_Nota_Asistencia">
@@ -101,56 +33,6 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.FT_Nota_Asistencia' no tie
           <Property Name="F_Notas_Azules" Type="int" />
           <Property Name="F_Promedio" Type="float" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Indice_STG' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Indice_STG">
-          <Property Name="F42" Type="float" />
-          <Property Name="AÑO" Type="float" />
-          <Property Name="SEMESTRE" Type="float" />
-          <Property Name="SEDE" Type="nvarchar" MaxLength="255" />
-          <Property Name="INSTITUCION" Type="nvarchar" MaxLength="255" />
-          <Property Name="ESTADO" Type="nvarchar" MaxLength="255" />
-          <Property Name="SALIDA INTERMEDIA" Type="nvarchar" MaxLength="255" />
-          <Property Name="VERIFICACION S" Type="nvarchar" MaxLength="255" />
-          <Property Name="COD_CARRERA" Type="float" />
-          <Property Name="NOM_CARRERA" Type="nvarchar" MaxLength="255" />
-          <Property Name="JORNADA" Type="nvarchar" MaxLength="255" />
-          <Property Name="RUT" Type="nvarchar" MaxLength="15" />
-          <Property Name="NOMBRES" Type="nvarchar" MaxLength="255" />
-          <Property Name="AP_PATERNO" Type="nvarchar" MaxLength="255" />
-          <Property Name="AP_MATERNO" Type="nvarchar" MaxLength="255" />
-          <Property Name="SEXO" Type="nvarchar" MaxLength="255" />
-          <Property Name="FNAC" Type="datetime" />
-          <Property Name="ESTADO CIVIL" Type="nvarchar" MaxLength="255" />
-          <Property Name="NACIONALIDAD" Type="nvarchar" MaxLength="255" />
-          <Property Name="TIPO INGRESO" Type="nvarchar" MaxLength="255" />
-          <Property Name="AÑO INGRESO" Type="float" />
-          <Property Name="SEM INGRESO" Type="float" />
-          <Property Name="USERNAME" Type="nvarchar" MaxLength="255" />
-          <Property Name="NOMBRE COLEGIO" Type="nvarchar" MaxLength="255" />
-          <Property Name="TIPO COLEGIO" Type="nvarchar" MaxLength="255" />
-          <Property Name="TIPO ESTUDIO" Type="nvarchar" MaxLength="255" />
-          <Property Name="PROM_LEM" Type="float" />
-          <Property Name="EGRESO EM" Type="float" />
-          <Property Name="AÑO PSU" Type="float" />
-          <Property Name="PROM_PSU" Type="float" />
-          <Property Name="COMUNA" Type="nvarchar" MaxLength="255" />
-          <Property Name="CALLE" Type="nvarchar" MaxLength="255" />
-          <Property Name="NUMERO" Type="float" />
-          <Property Name="REGION" Type="nvarchar" MaxLength="255" />
-          <Property Name="TELEFONO" Type="float" />
-          <Property Name="CELULAR" Type="float" />
-          <Property Name="EMAIL" Type="nvarchar" MaxLength="255" />
-          <Property Name="PPCF" Type="nvarchar" MaxLength="255" />
-          <Property Name="PPF" Type="nvarchar" MaxLength="255" />
-          <Property Name="PPS" Type="nvarchar" MaxLength="255" />
-          <Property Name="ID_ST" Type="nvarchar" MaxLength="255" />
-          <Property Name="ID_CS" Type="nvarchar" MaxLength="255" />
-          <Property Name="RUT SOSTE" Type="nvarchar" MaxLength="15" />
-          <Property Name="NOM SOSTE" Type="nvarchar" MaxLength="255" />
-          <Property Name="DIR SOSTE" Type="nvarchar" MaxLength="255" />
-          <Property Name="FONO SOSTE" Type="float" />
-        </EntityType>-->
         <EntityType Name="LK_Alumno">
           <Key>
             <PropertyRef Name="Id_Alumno" />
@@ -247,59 +129,6 @@ advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Indice_STG' no tiene defin
           <Property Name="Id_Semestre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Desc_Semestre" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Morosos_STG' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Morosos_STG">
-          <Property Name="RUT" Type="nvarchar" MaxLength="255" />
-          <Property Name="Fecha Vencimiento" Type="datetime" />
-          <Property Name="Cuota Vencida" Type="nvarchar" MaxLength="255" />
-          <Property Name="Monto Adeudado" Type="int" />
-          <Property Name="BENEFICIO" Type="nvarchar" MaxLength="255" />
-        </EntityType>-->
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Morosos_STG_OLD' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Morosos_STG_OLD">
-          <Property Name="Nº documento" Type="float" />
-          <Property Name="Pos" Type="float" />
-          <Property Name="Soc" Type="nvarchar" MaxLength="255" />
-          <Property Name="Div" Type="float" />
-          <Property Name="Rut" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sostenedor" Type="nvarchar" MaxLength="255" />
-          <Property Name="StatCompen" Type="nvarchar" MaxLength="255" />
-          <Property Name="Ctacontrato" Type="float" />
-          <Property Name="Ctamayor" Type="float" />
-          <Property Name="CtaMayorComp" Type="float" />
-          <Property Name="Fecha doc" Type="nvarchar" MaxLength="255" />
-          <Property Name="Fecontab" Type="nvarchar" MaxLength="255" />
-          <Property Name="Mon" Type="nvarchar" MaxLength="255" />
-          <Property Name="Venc-neto" Type="datetime" />
-          <Property Name="VencDPP" Type="nvarchar" MaxLength="255" />
-          <Property Name="Texto" Type="nvarchar" MaxLength="255" />
-          <Property Name="ClvP" Type="float" />
-          <Property Name="Imptemoneda local" Type="float" />
-          <Property Name="FeCompens" Type="nvarchar" MaxLength="255" />
-          <Property Name="Doccompens" Type="float" />
-          <Property Name="MCn" Type="nvarchar" MaxLength="255" />
-          <Property Name="FeContComp" Type="nvarchar" MaxLength="255" />
-          <Property Name="Mc" Type="nvarchar" MaxLength="255" />
-          <Property Name="CD" Type="nvarchar" MaxLength="255" />
-          <Property Name="Referencia" Type="float" />
-          <Property Name="ClOb" Type="nvarchar" MaxLength="255" />
-          <Property Name="Posición presupuestaria" Type="float" />
-          <Property Name="Centro gestor" Type="float" />
-          <Property Name="CeBe" Type="float" />
-          <Property Name="Orden" Type="nvarchar" MaxLength="255" />
-          <Property Name="Clvrecon" Type="nvarchar" MaxLength="255" />
-          <Property Name="ClaveReconComp" Type="nvarchar" MaxLength="255" />
-          <Property Name="RutFull" Type="nvarchar" MaxLength="11" StoreGeneratedPattern="Computed" />
-          <Property Name="RutFul" Type="nvarchar" MaxLength="11" StoreGeneratedPattern="Computed" />
-        </EntityType>-->
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Prueba_Param' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Prueba_Param">
-          <Property Name="Fecha" Type="date" />
-          <Property Name="Cantidad" Type="int" />
-        </EntityType>-->
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -326,38 +155,6 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Full_Alumnos' no tiene def
           <Property Name="Asig_Azules" Type="int" Nullable="false" />
           <Property Name="Asistencias" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Notas_Asig' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Notas_Asig">
-          <Property Name="JORNADA" Type="nvarchar" MaxLength="255" />
-          <Property Name="CODIGO ASIGNATURA" Type="nvarchar" MaxLength="255" />
-          <Property Name="SECCION" Type="int" />
-          <Property Name="Notas_Curso" Type="nvarchar" MaxLength="1" />
-        </EntityType>-->
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Notas_Asig_Alu' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Notas_Asig_Alu">
-          <Property Name="JORNADA" Type="nvarchar" MaxLength="255" />
-          <Property Name="CODIGO ASIGNATURA" Type="nvarchar" MaxLength="255" />
-          <Property Name="SECCION" Type="int" />
-          <Property Name="RUT ALUMNO" Type="nvarchar" MaxLength="255" />
-          <Property Name="Notas_Rendidas" Type="nvarchar" MaxLength="1" />
-          <Property Name="Notas_Azul" Type="int" />
-          <Property Name="Promedio" Type="float" />
-        </EntityType>-->
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'Permanencia_2.dbo.Notas_TR' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="Notas_TR">
-          <Property Name="SEDE" Type="nvarchar" MaxLength="255" />
-          <Property Name="JORNADA" Type="nvarchar" MaxLength="255" />
-          <Property Name="CODIGO ASIGNATURA" Type="nvarchar" MaxLength="255" />
-          <Property Name="SECCION" Type="int" />
-          <Property Name="AÑO" Type="int" />
-          <Property Name="SEMESTRE" Type="float" />
-          <Property Name="RUT ALUMNO" Type="nvarchar" MaxLength="255" />
-          <Property Name="Description" Type="nvarchar" MaxLength="128" />
-          <Property Name="value" Type="float" />
-        </EntityType>-->
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Score_Alumnos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="Score_Alumnos">
@@ -495,16 +292,15 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
     FROM [dbo].[Vector_Alumno] AS [Vector_Alumno]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="PermanenciaBDContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="PermanenciaBDContext" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityType Name="LK_Alumno">
           <Key>
             <PropertyRef Name="Id_Alumno" />
           </Key>
-          <Property Name="Id_Alumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Alumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Id_Sede" Type="Int32" />
           <Property Name="Id_Carrera" Type="Double" />
           <Property Name="Desc_Alumno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -515,14 +311,14 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Key>
             <PropertyRef Name="Id_Año_Deuda" />
           </Key>
-          <Property Name="Id_Año_Deuda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Año_Deuda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Año_Deuda" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="LK_Asignatura">
           <Key>
             <PropertyRef Name="Id_Asignatura" />
           </Key>
-          <Property Name="Id_Asignatura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Asignatura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Cod_Asignatura" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Seccion" Type="Int32" />
           <Property Name="Desc_Asignatura" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -534,7 +330,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Key>
             <PropertyRef Name="Id_Beneficio" />
           </Key>
-          <Property Name="Id_Beneficio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Beneficio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Beneficio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LK_Carrera">
@@ -549,7 +345,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Key>
             <PropertyRef Name="Id_Escuela" />
           </Key>
-          <Property Name="Id_Escuela" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Escuela" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Escuela" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LK_Jornada">
@@ -563,14 +359,14 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Key>
             <PropertyRef Name="Id_Medición" />
           </Key>
-          <Property Name="Id_Medición" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Medición" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Medición" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LK_Mes_Deuda">
           <Key>
             <PropertyRef Name="Id_Mes_Deuda" />
           </Key>
-          <Property Name="Id_Mes_Deuda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Mes_Deuda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Mes_Deuda" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="Id_Año_Deuda" Type="Int32" />
         </EntityType>
@@ -578,7 +374,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Key>
             <PropertyRef Name="Id_Profesor" />
           </Key>
-          <Property Name="Id_Profesor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Profesor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Profesor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Desc_Rut_Profesor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -586,14 +382,14 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Key>
             <PropertyRef Name="Id_Sede" />
           </Key>
-          <Property Name="Id_Sede" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Sede" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Sede" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LK_Semestre">
           <Key>
             <PropertyRef Name="Id_Semestre" />
           </Key>
-          <Property Name="Id_Semestre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Semestre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Semestre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -602,7 +398,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           </Key>
           <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
@@ -672,7 +468,7 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
           <Property Name="Notas_azules" Type="Int32" />
           <Property Name="Asistencias" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="PermanenciaDBContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PermanenciaDBContext" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
           <EntitySet Name="LK_Alumno" EntityType="Self.LK_Alumno" />
           <EntitySet Name="LK_Año_Deuda" EntityType="Self.LK_Año_Deuda" />
           <EntitySet Name="LK_Asignatura" EntityType="Self.LK_Asignatura" />
@@ -956,22 +752,22 @@ advertencia 6002: La tabla o vista 'Permanencia_2.dbo.Vector_Alumno' no tiene de
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
-      </DesignerInfoPropertySet>
-    </Options>
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="false" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
-  </Designer>
+    <edmx:Diagrams />
+  </edmx:Designer>
 </edmx:Edmx>
