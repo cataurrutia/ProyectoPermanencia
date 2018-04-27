@@ -41,7 +41,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="NegocioGlobal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProyectoPermanencia.AccesoDatos\ProyectoPermanencia.AccesoDatos.csproj">
+      <Project>{98e2eb65-a0e0-470c-b383-cbee07def121}</Project>
+      <Name>ProyectoPermanencia.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoPermanencia.Datos\ProyectoPermanencia.Datos.csproj">
+      <Project>{971fecdb-dc4f-4368-b077-64d6b3564765}</Project>
+      <Name>ProyectoPermanencia.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoPermanencia.Entidades\ProyectoPermanencia.Entidades.csproj">
+      <Project>{74947efa-87df-4663-97f8-b0bd567efda6}</Project>
+      <Name>ProyectoPermanencia.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoPermanencia.Servicio\ProyectoPermanencia.Servicio.csproj">
+      <Project>{2d3f04f2-640c-4425-b753-bd3907e48385}</Project>
+      <Name>ProyectoPermanencia.Servicio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
