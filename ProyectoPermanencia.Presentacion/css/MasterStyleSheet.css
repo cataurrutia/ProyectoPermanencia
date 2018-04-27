@@ -1,0 +1,24 @@
+﻿* {
+    font-family: 'Open Sans',sans-serif;
+    justify-content:center;
+
+}
+
+header {
+    display: block;
+    height: 90px;
+    background: rgb(9,40,69);
+    border-bottom: 5px solid rgb(252,173,24);
+}
+
+MenuPrincipal {
+    text-decoration: none;
+}
+
+footer {
+    display: block;
+    height: 90px;
+    background: rgb(9,40,69);
+    border-top: 5px solid rgb(252,173,24);
+}
+

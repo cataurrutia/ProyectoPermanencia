@@ -4,27 +4,42 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>PROYECTO PERMANENCIA</title>
+    <link href="css/MasterStyleSheet.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    
 </head>
 <body>
-    <header>
-        <h1>LOOOOOLOLOL</h1>
+    <form id="formPrincipal" runat="server">
+        <asp:Menu ID="MenuPrincipal" runat="server" class="MenuPrincipal" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Pages/FichaAlumno.aspx" Text=" [Ficha] " />
+                <asp:MenuItem NavigateUrl="~/Pages/VisionGlobal.aspx" Text=" [Global] " />
+            </Items>
+        </asp:Menu>
+        <header>
+            <img runat="server" src="" />
+        </header>
+        <div>
 
-        <h2>WE ARE ALL MAD HERE</h2>
-    </header>
-    <div>
-        <form id="form1" runat="server">
             <div>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderFicha" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-        </form>
-    </div>
-    <footer>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderGlobal" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderHistorico" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
 
-    </footer>
+        </div>
+        <footer>
+        </footer>
+    </form>
 </body>
 </html>
