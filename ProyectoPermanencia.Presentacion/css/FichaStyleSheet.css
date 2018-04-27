@@ -1,5 +1,29 @@
-﻿.ScoreNotas {
-    align-content: center;
-    font-family: 'Comic Sans MS';
+﻿div .info {
+    font-family: Calibri;
+    float: left;
+    border-style: solid;
+    border-color: rgb(9,40,69);
+
+
 }
 
+div .ScoreNotas {
+    align-content: center;
+    vertical-align: central;
+    border-style: solid;
+    border-color: rgb(9,40,69);
+}
+
+div .ScoreAsistencia {
+    align-content: center;
+    vertical-align: central;
+    border-style: solid;
+    border-color: rgb(9,40,69);
+}
+
+div .ScoreFinanzas {
+    align-content: center;
+    vertical-align: central;
+    border-style: solid;
+    border-color: rgb(9,40,69);
+}
